@@ -1,31 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quotes · Jerry</title>
-  <link rel="icon" href="favicon-32.png" sizes="32x32">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header id="site-header"></header>
+    <header id="site-header"></header>
 
-  <main>
-    <h1>Travel Tips</h1>
-    <p>Useful advice for student trips.</p>
+    <main>
+        <!-- Hero区域：随机名言（满足checklist第7项） -->
+        <section class="hero-quote">
+            <h2>Quote of the day</h2>
+            <p id="randomQuote"></p>
+        </section>
 
-  <ul>
-    <li>How to plan a cheap weekend trip</li>
-    <li>What to pack for short journeys</li>
-    <li>Budget tips for university students</li>
-  </ul>
-</main>
-  
+        <h1>Travel Quotes</h1>
+        <ul id="quoteList">
+            <li>The world is a book and those who do not travel read only one page. – Saint Augustine</li>
+            <li>Not all who wander are lost. – J.R.R. Tolkien</li>
+            <li>Travel is the only thing you buy that makes you richer.</li>
+            <li>Adventure is worthwhile. – Aristotle</li>
+            <li>Life is either a daring adventure or nothing at all. – Helen Keller</li>
+            <li>To travel is to live. – Hans Christian Andersen</li>
+            <li>Wanderlust: a strong desire to travel.</li>
+            <li>Take only memories, leave only footprints.</li>
+            <li>Travel far enough, you meet yourself. – David Mitchell</li>
+            <li>Oh, the places you’ll go! – Dr. Seuss</li>
+            <li>Once a year, go someplace you’ve never been before. – Dalai Lama</li>
+            <li>Travel changes you. – Anthony Bourdain</li>
+            <li>The journey is the reward. – Tao saying</li>
+            <li>Never stop exploring.</li>
+            <li>Collect moments, not things.</li>
+        </ul>
+    </main>
 
-  <footer id="site-footer"></footer>
+    <footer id="site-footer"></footer>
 
-  <script src="nav.js"></script>
-  <script src="likes.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            const items = document.querySelectorAll("#quoteList li");
+            const quoteArray = [];
+            for(let q of items){
+                quoteArray.push(q.innerText);
+            }
+            const rand = Math.floor(Math.random() * quoteArray.length);
+            document.getElementById("randomQuote").innerText = quoteArray[rand];
+        })
+    </script>
+    <script src="nav.js"></script>
 </body>
 </html>

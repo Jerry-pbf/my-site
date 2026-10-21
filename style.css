@@ -88,17 +88,27 @@ nav a:hover {
   color: #6b7280;
 }
 .runaway-box {
-  margin-top: 40px;
-  padding: 30px 0;
+  margin-top: 60px;
+  padding: 40px 0;
+  text-align: center;
 }
 #travelBtn {
-  padding:12px 24px;
-  font-size:20px;
-  background-color:#2E8B57;
-  color:white;
-  border:none;
-  border-radius:8px;
-  cursor:pointer;
-  position:relative;
+  width: 180px;
+  height: 180px;
+  font-size: 26px;
+  background-color: #dc2626;
+  color: white;
+  border: none;
+  border-radius: 50%;  /* 50% = 正圆形 */
+  cursor: pointer;
+  position: relative;
   transition: 0.2s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+#travelBtn:hover {
+  background-color: #b91c1c;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.3);
 }
