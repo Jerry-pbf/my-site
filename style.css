@@ -87,3 +87,18 @@ nav a:hover {
   border-top: 1px solid #dcd8d0;
   color: #6b7280;
 }
+.runaway-box {
+  margin-top: 40px;
+  padding: 30px 0;
+}
+#travelBtn {
+  padding:12px 24px;
+  font-size:20px;
+  background-color:#2E8B57;
+  color:white;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  position:relative;
+  transition: 0.2s ease;
+}
